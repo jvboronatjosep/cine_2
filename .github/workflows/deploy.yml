@@ -23,15 +23,15 @@ jobs:
       - name: Build and push DB Docker image
         run: |
           cd mysql
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/mi_cine2:v1 .
-          docker push ${{ secrets.DOCKER_USERNAME }}/mi_cine2:v1
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/mi_cine2:v2 .
+          docker push ${{ secrets.DOCKER_USERNAME }}/mi_cine2:v2
 
       # Construir y subir la imagen de la aplicación
       - name: Build and push PHP Docker image
         run: |
           cd php
-          docker build -t ${{ secrets.DOCKER_USERNAME }}/mi_app_cine2:v1 .
-          docker push ${{ secrets.DOCKER_USERNAME }}/mi_app_cine2:v1
+          docker build -t ${{ secrets.DOCKER_USERNAME }}/mi_app_cine2:v2 .
+          docker push ${{ secrets.DOCKER_USERNAME }}/mi_app_cine2:v2
 
       # Transferir el archivo compose.yml al servidor remoto
       - name: Transfer compose.yml to remote server

@@ -1,11 +1,11 @@
 services:
   db:
-    image: jvboronatjosep/mi_cine2:v1
+    image: jvboronatjosep/mi_cine2:v2
     container_name: contenedorMiCine2
     ports:
       - "3306:3306"
   php:
-    image: jvboronatjosep/mi_app2_cine:v1
+    image: jvboronatjosep/mi_app_cine2:v2
     container_name: contenedorMiApp2
     ports:
       - "8080:80"
