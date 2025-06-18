@@ -3,6 +3,7 @@ $servername = "db";
 $username = "usuario1";
 $password = "contrasenyaUsuario1";
 $dbname = "cine";
+
 // Crear la conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Verificar la conexión
